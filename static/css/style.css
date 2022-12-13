@@ -111,11 +111,14 @@
 }
 
 .titles h1{
+    text-decoration: none;
+    color: hotpink;
     border-radius: 10px;
     background-color: #ffccff;
     padding: 25px;
 }
-.author{
+.author {
+    color: hotpink;
     font-family: EB Garamond;
     margin-right: 550px;
     border-radius: 10px;
@@ -181,5 +184,11 @@
     left: 595px;
 }
 
+.card-footer{
+    background-color:#d9b3ff;
+}
 
+.create-post{
+
+}
 

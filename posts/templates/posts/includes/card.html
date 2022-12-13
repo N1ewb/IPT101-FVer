@@ -6,7 +6,7 @@
                 <a class="link" href="{{ url_for('user_profile') }}">{{ post.poster.firstname }}</a> <p class="align=right ">{{ post.created.date() }}</p>
                 {% endif %}
             </div>
-            <div class="card-body">
+            <div class="card-body ">
                 <h5 class="card-title">
                     <a href="{{ url_for('posts.post_detail', slug=post.slug) }}">{{post.title}}</a>
                 </h5>

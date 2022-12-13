@@ -5,6 +5,13 @@
 {% endblock %}
 
 {% block content %}
+    {% if not pages.has_prev %}
+    <div class="create-post">
+        <a class="btn btn-primary mt-2 "href="{{ url_for('posts.post_create') }}">What's on your mind, {{current_user.firstname}}?</a>
+    </div>
+
+
+    {% endif %}
     <h1>Blog Feed</h1>
 
     {% for post in pages.items %}

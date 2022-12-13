@@ -1,11 +1,16 @@
 {% extends 'base.html' %}
 
-{% block title%}
-  Create New Post
-{% endblock %}
-
-{% block content%}
-    <h1>What's on your mind</h1>
+{% block modal %}
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">What's on your mind, {{current_user.firstname}}?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
     <form action="{{ url_for('posts.post_create') }}" method="POST">
 
         {% for field in form %}
@@ -14,7 +19,22 @@
           {{ field(class="form-control") }}
         </div>
         {% endfor %}
-        <button class="btn btn-primary mt-2">Submit</button>
 
+<div class="modal-footer">
+        <button class="btn btn-primary mt-2">Submit</button>
+      </div>
     </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block script %}
+<script>
+$(document).ready(function(){
+        console.log("window is loaded")
+        $("#exampleModal").modal("show")
+    })
+</script>
 {% endblock %}
