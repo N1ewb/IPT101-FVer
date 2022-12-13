@@ -1,0 +1,10 @@
+Flask-Migrate==2.6.0
+flask_admin
+flask_login
+flask_sqlalchemy
+flask_security
+email_validator
+WTForms~=3.0.1
+Flask~=2.2.2
+SQLAlchemy~=1.4.45
+alembic~=1.8.1
