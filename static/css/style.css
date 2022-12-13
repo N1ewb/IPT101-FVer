@@ -1,0 +1,185 @@
+.login-panel{
+    border:1px solid #dddddd;
+    border-radius: 2px;
+    position: fixed;
+    right: 50px;
+    bottom: 30px;
+    padding: 10px;
+}
+
+
+.form {
+     margin-top: 40px;
+     border: 3px solid #f1f1f1;
+     background-color: white;
+     border-radius: 15px;
+
+}
+.align-pls{
+    margin-left: 5px;
+}
+
+.email{
+
+}
+.box1{
+    position: absolute;
+    background-image: url("../images/loginside.jpg");
+    top: 113px;
+    left: 300px;
+    background-color: #004d4d;
+    border: 15px background-color: green;
+    width:400px;
+    height:500px;
+
+    border-radius: 15px;
+}
+
+
+.box{
+    position: absolute;
+  background-color: #ffa64d;
+  top: 93px;
+  left: 520px;
+  height: 500px;
+  width: 500px;
+  border: 15px background-color: #ffa64d;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 15px;
+}
+
+.login{
+    margin-bottom: 5px;
+    margin-left: -5px;
+    color: #334d00;
+    font-size: 1.5em;
+}
+
+
+.Faceblog{
+     position: absolute;
+     top: 210px;
+     left: 380px;
+     font-family:Pacifico;
+     color: white;
+     font-size: 4em;
+}
+
+.flashes{
+    position: absolute;
+    top: 120px;
+    left: 665px;
+
+}
+
+.form1{
+    margin-top: 35px;
+     border: 3px solid #f1f1f1;
+     background-color: white;
+     border-radius: 15px;
+}
+.register{
+    margin-bottom: 5px;
+    margin-left: 5px;
+    color: #334d00;
+    border: 20px background-color: orange;
+    border-radius: 10px;
+    font-size: 1.5em;
+}
+
+.submit1 {
+    margin-left: 160px;
+}
+
+.submit {
+    margin-left: 160px;
+}
+
+.containers{
+    position: absolute;
+    top: 120px;
+    left: 720px;
+}
+
+.card-header {
+    background-color: #ffccff;
+
+}
+.card-body{
+    background-color: #ccccff;
+}
+
+.titles h1{
+    border-radius: 10px;
+    background-color: #ffccff;
+    padding: 25px;
+}
+.author{
+    font-family: EB Garamond;
+    margin-right: 550px;
+    border-radius: 10px;
+    background-color: #ccccff;
+    text-align: center;
+    padding-left: 5px;
+}
+.body{
+    margin-top: -8px;
+    border-radius: 10px;
+    background-color: #ccccff;
+    padding-bottom: 50px;
+    padding-left: 25px;
+}
+
+.postbox {
+  position: absolute;
+  background-color: #ffa64d;
+  top: 93px;
+  left: 520px;
+  height: 500px;
+  width: 500px;
+  border: 15px background-color: #ffa64d;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 15px;
+}
+.head{
+ position: absolute;
+ color: #006666;
+ top: 125px;
+ left: 565px;
+}
+.prof-box{
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 90px;
+  left: 400px;
+  width: 100px;
+  background-color: #ffccff;
+  border-radius: 10px;
+  padding: 250px;
+  padding-bottom; 50px;
+  margin: 20px;
+}
+
+.pic{
+    background-image: url("../images/defaultprof.jpg");
+    position: absolute;
+    top: 180px;
+    left: 615px;
+    padding: 50px;
+    border-radius: 50%;
+}
+
+.info {
+    list-style: none;
+    text-align: justify;
+    text-justify: inter-word;
+    color: #006666;
+    position: absolute;
+    top: 290px;
+    left: 595px;
+}
+
+
+

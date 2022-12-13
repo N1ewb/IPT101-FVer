@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+
+{% block title %}
+  Register New Account
+{% endblock %}
+
+{% block content %}
+<div class="menu"></div>
+
+
+<div class="box1"><img /></div>
+
+<div class="box">
+    <div class="form1">
+<form action="{{ url_for('create_account') }}" method="POST">
+    <div class="register"><span>Register</span></div>
+    <input type="text" name="firstname" placeholder="firstname" class="form-control mb-4" />
+    <input type="text" name="lastname" placeholder="lastname" class="form-control mb-4" />
+    <input type="email" name="email" placeholder="email" class="form-control mb-4" />
+    <input type="password" name="password" placeholder="password" class="form-control" />
+    <div class="submit"><input type="submit" value="Sign up" class="btn btn-success mt-4"></div>
+</form>
+        </div>
+</div>
+
+    <div class="containers">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages%}
+                <div class="alert alert-warning" role="alert" >{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+<div class="Faceblog mt-5"><h1>Face <br></br>Blog</h1></div>
+
+
+{% endblock %}

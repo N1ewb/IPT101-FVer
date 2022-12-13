@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Login
+{% endblock %}
+
+{% block content%}
+{% from "security/_macros.html" import render_field_with_errors, render_field %}
+<div class="menu"></div>
+<div class="box1"> <img /></div>
+
+
+<div class="box">
+<div class="form">
+  <div class="align-pls">
+    <div class="login"> <span>{{ _('Login') }}</span> </div>
+    <form action="{{ url_for_security('login') }}" method="POST" name="login_user_form">
+      <div class="">{{ login_user_form.hidden_tag() }}</div>
+      <div class="email1">{{ render_field_with_errors(login_user_form.email, class="form-control mb-4", placeholder="Email") }}</div>
+      <div class="password1">{{ render_field_with_errors(login_user_form.password,class="form-control mb-4", placeholder="Password") }}</div>
+      <div class="remember1">{{ render_field_with_errors(login_user_form.remember) }}</div>
+      <div class="nex1t">{{ render_field(login_user_form.next) }}</div>
+      <div class="submit1">{{ render_field(login_user_form.submit, class="button",class="btn btn-success") }}</div>
+    </form>
+  </div>
+  </div>
+  </div>
+  {% include "security/_messages.html" %}
+<div class="Faceblog mt-5"><h1>Face <br></br>Blog</h1></div>
+
+{% endblock %}

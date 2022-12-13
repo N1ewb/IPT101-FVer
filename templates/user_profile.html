@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+
+{% block title%}
+  Profile
+{% endblock %}
+
+{% block content%}
+  {% if not current_user.has_role('admin') %}
+<div class="prof-box"> </div>
+<div class="head"><h1>User Profile</h1></div>
+<div class="pic"></div>
+<div class="info">
+  <li>{{ current_user.firstname + current_user.lastname }}</li>
+  <li>{{ current_user.email}}</li>
+</div>
+  {% if poster.id == current_user.id %}
+  {% endif %}
+{% else %}
+
+  <div class="prof-box"> </div>
+<div class="head"><h1>User Profile</h1></div>
+<div class="pic"></div>
+<div class="info">
+  <li>Im Admin</li>
+  <li>{{ current_user.email}}</li>
+</div>
+
+{% endif %}
+{% endblock %}
