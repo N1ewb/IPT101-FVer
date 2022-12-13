@@ -3,12 +3,14 @@
 {% block modal %}
 <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
+   <div class="vertical-alignment-helper">
+    <div class="modal-dialog vertical-align-center">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">What's on your mind, {{current_user.firstname}}?</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <a type="button" class="close" href="{{ url_for('posts.posts_list') }}" aria-label="Close">
           <span aria-hidden="true">&times;</span>
-        </button>
+        </a>
       </div>
       <div class="modal-body">
     <form action="{{ url_for('posts.post_create') }}" method="POST">
@@ -19,14 +21,15 @@
           {{ field(class="form-control") }}
         </div>
         {% endfor %}
-
-<div class="modal-footer">
-        <button class="btn btn-primary mt-2">Submit</button>
-      </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary mt-2">Submit</button>
+        </div>
     </form>
       </div>
 
     </div>
+  </div>
+  </div>
   </div>
 </div>
 {% endblock %}

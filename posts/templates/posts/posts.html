@@ -1,37 +1,39 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Posts Page
+Posts Page
 {% endblock %}
 
 {% block content %}
-    {% if not pages.has_prev %}
-    <div class="create-post">
-        <a class="btn btn-primary mt-2 "href="{{ url_for('posts.post_create') }}">What's on your mind, {{current_user.firstname}}?</a>
-    </div>
+{% if not pages.has_prev %}
+<div class="create-post">
+    <a style="text-decoration: none; text-align: center; font-size: 25px; color: hotpink; background-color:#ccccff;"
+       class="form-control mb-4 "
+       href="{{ url_for('posts.post_create') }}">What's on your mind, {{current_user.firstname}}?</a>
+</div>
 
 
-    {% endif %}
-    <h1>Blog Feed</h1>
+{% endif %}
+<h1>Blog Feed</h1>
 
-    {% for post in pages.items %}
-        {% include 'posts/includes/card.html' %}
-    {% endfor %}
-    <nav aria-label="...">
-        <ul class="pagination">
-            <li class="page-item {% if not pages.has_prev %}disabled {% endif %}">
-                <a class="page-link" href="./?page={{pages.prev_num}}">Previous</a>
-            </li>
-            {% for page in pages.iter_pages() %}
-                <li class="page-item {% if page == pages.page %} active {% endif %}">
-                <a class="page-link" href="./?page = {{ page }}">{{ page }}</a>
-            </li>
-            {% endfor %}
-            <li class="page-item {% if not pages.has_next %}disabled {% endif %} ">
-                <a class="page-link" href="./?page={{pages.next_num}}">
-                    Next
-                </a>
-            </li>
-        </ul>
-    </nav>
+{% for post in pages.items %}
+{% include 'posts/includes/card.html' %}
+{% endfor %}
+<nav aria-label="...">
+    <ul class="pagination">
+        <li class="page-item {% if not pages.has_prev %}disabled {% endif %}">
+            <a class="page-link" href="./?page={{pages.prev_num}}">Previous</a>
+        </li>
+        {% for page in pages.iter_pages() %}
+        <li class="page-item {% if page == pages.page %} active {% endif %}">
+            <a class="page-link" href="./?page = {{ page }}">{{ page }}</a>
+        </li>
+        {% endfor %}
+        <li class="page-item {% if not pages.has_next %}disabled {% endif %} ">
+            <a class="page-link" href="./?page={{pages.next_num}}">
+                Next
+            </a>
+        </li>
+    </ul>
+</nav>
 {% endblock %}

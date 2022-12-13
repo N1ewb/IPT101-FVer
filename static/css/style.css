@@ -25,8 +25,8 @@
 .box1{
     position: absolute;
     background-image: url("../images/loginside.jpg");
-    top: 113px;
-    left: 300px;
+    top: 5px;
+    left: 35px;
     background-color: #004d4d;
     border: 15px background-color: green;
     width:400px;
@@ -39,8 +39,8 @@
 .box{
     position: absolute;
   background-color: #ffa64d;
-  top: 93px;
-  left: 520px;
+  top: -15px;
+  left: 235px;
   height: 500px;
   width: 500px;
   border: 15px background-color: #ffa64d;
@@ -59,8 +59,8 @@
 
 .Faceblog{
      position: absolute;
-     top: 210px;
-     left: 380px;
+     top: 110px;
+     left: 105px;
      font-family:Pacifico;
      color: white;
      font-size: 4em;
@@ -149,14 +149,14 @@
 .head{
  position: absolute;
  color: #006666;
- top: 125px;
- left: 565px;
+ top: 25px;
+ left: 295px;
 }
 .prof-box{
   background-repeat: no-repeat;
   position: absolute;
-  top: 90px;
-  left: 400px;
+  top: -10px;
+  left: 130px;
   width: 100px;
   background-color: #ffccff;
   border-radius: 10px;
@@ -168,8 +168,8 @@
 .pic{
     background-image: url("../images/defaultprof.jpg");
     position: absolute;
-    top: 180px;
-    left: 615px;
+    top: 100px;
+    left: 350px;
     padding: 50px;
     border-radius: 50%;
 }
@@ -180,15 +180,21 @@
     text-justify: inter-word;
     color: #006666;
     position: absolute;
-    top: 290px;
-    left: 595px;
+    top: 250px;
+    left: 335px;
 }
 
 .card-footer{
-    background-color:#d9b3ff;
+    background-color:#ffccff;
+}
+
+.modal{
+    top:100px;
 }
 
 .create-post{
-
+    text-decoration: toggle;
+    font-family: EB Garamond;
 }
+
 
