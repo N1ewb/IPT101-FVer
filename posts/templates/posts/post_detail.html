@@ -1,29 +1,32 @@
 {% extends 'base.html' %}
 
-  {% block title %}
-    {{ post.title }}
-  {% endblock %}
+{% block title %}
+{{ post.title }}
+{% endblock %}
 
-  {% block content%}
+{% block content%}
 
-    {% if current_user.has_role('admin') %}
-  <div class="post-box"> <img /> </div>
-    <div class="detail">
-      <h1>{{ post.title }}</h1>
-      <p>Author: <a class="link" href="{{ url_for('user_profile') }}">{{ post.poster.email }}</a></p>
-      {{ post.body }}
+{% if current_user.has_role('admin') %}
+<div class="post-box"><img/></div>
+<div class="detail">
+  <h1>{{ post.title }}</h1>
+  <p>Author: <a class="link" href="{{ url_for('user_profile') }}">{{ post.poster.email }}</a></p>
+  {{ post.body }}
+</div>
+
+{% else %}
+<div class="post-box">
+  <div class="detail">
+    <div class="titles"><h1>{{ post.title }}</h1></div>
+    <div class="author">
+      <p>Author:</p>
+      <a style="text-decoration: none; color: hotpink;" class="author" href="{{ url_for('user_profile') }}"> </a>
+      <p>{{ post.poster.firstname }}</p>
     </div>
+    <div class="body">{{ post.body }}</div>
+  </div>
+</div>
 
-    {% else %}
-  <div class="post-box">
-    <div class="detail">
-      <div class="titles"><h1>{{ post.title }}</h1></div>
-      <div class="author">
-      <p>Author: <a class="link" href="{{ url_for('user_profile') }}">{{ post.poster.firstname }}</a></p></div>
-      <div class="body">{{ post.body }}</div>
-      </div>
-    </div>
-
-    {% endif %}
-  {% endblock %}
+{% endif %}
+{% endblock %}
 

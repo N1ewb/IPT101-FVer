@@ -6,13 +6,13 @@ Posts Page
 
 {% block content %}
 {% if not pages.has_prev %}
-<div class="create-post">
-    <a style="text-decoration: none; text-align: center; font-size: 25px; color: hotpink; background-color:#ccccff;"
-       class="form-control mb-4 "
-       href="{{ url_for('posts.post_create') }}">What's on your mind, {{current_user.firstname}}?</a>
+<div class="panels-box">
+    <div class="create-post">
+        <a style="text-decoration: none; text-align: center; font-size: 20px; color: hotpink; "
+           class=" mb-4 "
+           href="{{ url_for('posts.post_create') }}">What's on your mind, {{current_user.firstname}}?</a>
+    </div>
 </div>
-
-
 {% endif %}
 <h1>Blog Feed</h1>
 

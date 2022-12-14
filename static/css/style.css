@@ -1,11 +1,24 @@
+
 .login-panel{
-    border:1px solid #dddddd;
-    border-radius: 2px;
+    border: 3px solid #f1f1f1;
+
+    border-radius: 5px;
     position: fixed;
-    right: 50px;
-    bottom: 30px;
-    padding: 10px;
+    right:61px;
+    bottom: 55px;
+    padding: 15px;
+    z-index: 10;
 }
+
+.login-panel a {
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+}
+
 
 
 .form {
@@ -68,8 +81,8 @@
 
 .flashes{
     position: absolute;
-    top: 120px;
-    left: 665px;
+    top: 21px;
+    left: 380px;
 
 }
 
@@ -176,12 +189,12 @@
 
 .info {
     list-style: none;
-    text-align: justify;
+    text-align: center;
     text-justify: inter-word;
     color: #006666;
     position: absolute;
     top: 250px;
-    left: 335px;
+    left: 330px;
 }
 
 .card-footer{
@@ -193,8 +206,19 @@
 }
 
 .create-post{
+    text-align: center;
+    margin-left: 120px;
+    margin-right: 120px;
     text-decoration: toggle;
     font-family: EB Garamond;
+    padding:5px;
+    background-color: white;
+    border-radius: 18px;
+}
+
+.panels-box{
+    border: 3px solid #f1f1f1;
+    padding: 5px;
 }
 
 

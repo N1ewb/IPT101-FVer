@@ -16,6 +16,7 @@ posts = Blueprint('posts', __name__, template_folder='templates')
 @login_required
 def post_create():
     form = PostForm()
+    q = request.args.get('q')
     if request.method == 'POST':
         title = request.form.get('title')
         body = request.form.get('body')
@@ -29,7 +30,32 @@ def post_create():
             print('Very long traceback')
         return redirect(url_for('posts.post_detail', slug=post.slug))
 
-    return render_template('posts/post_create.html', form=form)
+    if q:
+        posts = Post.query.filter(Post.title.contains(q) | Post.body.contains(q))
+    else:
+        posts = Post.query.order_by(Post.created.asc())
+    if request.method == 'POST':
+        title = request.form.get('title')
+        body = request.form.get('body')
+        poster = current_user.id
+
+        try:
+            post = Post(title=title, body=body, poster_id=poster)
+            db.session.add(post)
+            db.session.commit()
+        except:
+            print('Very long traceback')
+        return redirect(url_for('posts.post_detail', slug=post.slug))
+    page = request.args.get('page')
+
+    if page and page.isdigit():
+        page = int(page)
+    else:
+        page = 1
+
+    pages = posts.paginate(page=page, per_page=4)
+
+    return render_template('posts/post_create.html', form=form, pages=pages)
 
 
 @posts.route('/')
